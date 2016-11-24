@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from blog import views as blog_views
+from django.conf.urls.static import static
+from myblog import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$',blog_views.get_blogs,name="get_blogs"),
+    url(r'^blog/(?P<pk>\d+)/$',blog_views.get_detail,name='blog_get_detail'),
+    url(r'^photos/$',blog_views.get_photos,name='get_photos'),
 ]
+urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT )
