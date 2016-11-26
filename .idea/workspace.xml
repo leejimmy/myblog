@@ -2,42 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54a08dfb-c6ba-4b64-8aba-fba616aa9f1e" name="Default" comment="丰富前端页面">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog/templates/blog_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/photos.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/models.py" afterPath="$PROJECT_DIR$/blog/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/blog_list.html" afterPath="$PROJECT_DIR$/blog/templates/blog_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/views.py" afterPath="$PROJECT_DIR$/blog/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myblog/settings.py" afterPath="$PROJECT_DIR$/myblog/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myblog/urls.py" afterPath="$PROJECT_DIR$/myblog/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <list id="badbf657-9c0f-49ae-9f8b-f40cd82eb9e4" name="Failed commit: Default" comment="丰富前端页面">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/base/js/html5.js" afterPath="$PROJECT_DIR$/blog/static/base/js/html5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/base/js/jquery.js" afterPath="$PROJECT_DIR$/blog/static/base/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/base/style.css" afterPath="$PROJECT_DIR$/blog/static/base/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/base/╒╥═°╒╛─г░х╛═╔╧б╛─г░х╓о╝╥б┐cssMoban.com.url" afterPath="$PROJECT_DIR$/blog/static/base/╒╥═°╒╛─г░х╛═╔╧б╛─г░х╓о╝╥б┐cssMoban.com.url" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/base/╦╡├ў.txt" afterPath="$PROJECT_DIR$/blog/static/base/╦╡├ў.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/contact/config.php" afterPath="$PROJECT_DIR$/blog/static/photos/contact/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/contact/contact.php" afterPath="$PROJECT_DIR$/blog/static/photos/contact/contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/css/animate.css" afterPath="$PROJECT_DIR$/blog/static/photos/css/animate.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/css/overwrite.css" afterPath="$PROJECT_DIR$/blog/static/photos/css/overwrite.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/css/style.css" afterPath="$PROJECT_DIR$/blog/static/photos/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/blog/static/photos/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/fonts/glyphicons-halflings-regular.eot@" afterPath="$PROJECT_DIR$/blog/static/photos/fonts/glyphicons-halflings-regular.eot@" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/blog/static/photos/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/blog/static/photos/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/blog/static/photos/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/js/jquery.js" afterPath="$PROJECT_DIR$/blog/static/photos/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/js/jquery.localscroll-1.2.7-min.js" afterPath="$PROJECT_DIR$/blog/static/photos/js/jquery.localscroll-1.2.7-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/js/jquery.scrollTo-1.4.3.1-min.js" afterPath="$PROJECT_DIR$/blog/static/photos/js/jquery.scrollTo-1.4.3.1-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/js/main.js" afterPath="$PROJECT_DIR$/blog/static/photos/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/js/modernizr-2.6.2-respond-1.1.0.min.js" afterPath="$PROJECT_DIR$/blog/static/photos/js/modernizr-2.6.2-respond-1.1.0.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/js/skrollr.min.js" afterPath="$PROJECT_DIR$/blog/static/photos/js/skrollr.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/photos/js/validate.js" afterPath="$PROJECT_DIR$/blog/static/photos/js/validate.js" />
-    </list>
+    <list id="badbf657-9c0f-49ae-9f8b-f40cd82eb9e4" name="Failed commit: Default" comment="丰富前端页面" />
     <ignored path="myblog.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -117,7 +84,7 @@
       <file leaf-file-name="photos.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/photos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="15">
               <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
               <folding />
             </state>
@@ -197,6 +164,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -217,7 +185,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -793,7 +760,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/photos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="15">
           <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
           <folding />
         </state>
