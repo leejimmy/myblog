@@ -82,7 +82,7 @@
                 <img src="{{ images_url1 }}" width="320" height="280" alt="">
                 <div class="text-column">
                     <h2 style="text-align: center"><a href="{{ blog_1.get_absolute_url }}">{{ blog_1.title }}</a></h2>
-                    {{ blog_1.content | truncatewords:5 | safe }}
+                    {{ cont1 }}
                 </div><!-- text-column -->
                 <div class="separator"></div>
             </div><!-- wrap -->
@@ -93,7 +93,7 @@
                 <img src="{{ images_url2 }}" width="320" height="280" class="align-right" alt="">
                 <div class="text-column">
                     <h2 style="text-align: center"><a href="{{ blog_2.get_absolute_url }}">{{ blog_2.title }}</a> </h2>
-                    {{ blog_2.content | truncatewords:5 | safe }}
+                    {{ cont2 }}
                 </div><!-- text-column -->
             </div><!-- wrap -->
         </section><!-- textblock -->

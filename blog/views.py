@@ -17,12 +17,18 @@ def get_blogs(request):
     con2 = a2.content
     images_url2 = re.findall('src="(.*?)" alt.*', con2)[0]
 
+    #cont1和cont2是文章过滤掉图片后的文字内容
+    cont1 = re.findall('<p>(.*?)</p>',con1)[0]
+    cont2 = re.findall('<p>(.*?)</p>',con2)[0]
+
     ctx = {
         #'blogs':Blog.objects.all().order_by('-created')
         'blog_1':Blog.objects.all().order_by('-created')[0],
         'blog_2':Blog.objects.all().order_by('-created')[1],
         'images_url1':images_url1,
-        'images_url2':images_url2
+        'images_url2':images_url2,
+        'cont1':cont1,
+        'cont2':cont2
     }
 
     return render(request,'index.html',ctx)
