@@ -3,13 +3,26 @@ from django.shortcuts import render
 from .models import Blog,Comment
 from django.http import Http404
 from .forms import CommentForm
+import re
 
 # Create your views here.
 def get_blogs(request):
+
+    #images_url1和images_url2是上传图片的位置
+    a1 = Blog.objects.all().order_by('-created')[0]
+    con1 = a1.content
+    images_url1 = re.findall('src="(.*?)" alt.*',con1)[0]
+
+    a2 = Blog.objects.all().order_by('-created')[1]
+    con2 = a2.content
+    images_url2 = re.findall('src="(.*?)" alt.*', con2)[0]
+
     ctx = {
         #'blogs':Blog.objects.all().order_by('-created')
-        'blog_1':Blog.objects.all()[0],
-        'blog_2':Blog.objects.all()[1]
+        'blog_1':Blog.objects.all().order_by('-created')[0],
+        'blog_2':Blog.objects.all().order_by('-created')[1],
+        'images_url1':images_url1,
+        'images_url2':images_url2
     }
 
     return render(request,'index.html',ctx)
@@ -39,6 +52,9 @@ def get_detail(request,pk):
         'comments': blog.comment_set.all().order_by('-created'),
         'form': form
     }
+
+
+
     return render(request,'blog_detail.html',ctx)
 
 

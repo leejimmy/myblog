@@ -76,16 +76,10 @@
                 <div class="separator"></div>
             </div>
         </header>
-        {% for blog in blogs %}
-            <section class="textblock">
-                <div class="wrap">
 
-                </div>
-            </section>
-        {% endfor %}
         <section class="textblock">
             <div class="wrap">
-                <img src="/static/base/upload/haibian_gezhao.jpg" width="320" height="280" alt="">
+                <img src="{{ images_url1 }}" width="320" height="280" alt="">
                 <div class="text-column">
                     <h2 style="text-align: center"><a href="{{ blog_1.get_absolute_url }}">{{ blog_1.title }}</a></h2>
                     {{ blog_1.content | truncatewords:5 | safe }}
@@ -96,7 +90,7 @@
 
         <section class="textblock">
             <div class="wrap">
-                <img src="/static/base/upload/fantte_gezhao.jpg" width="320" height="280" class="align-right" alt="">
+                <img src="{{ images_url2 }}" width="320" height="280" class="align-right" alt="">
                 <div class="text-column">
                     <h2 style="text-align: center"><a href="{{ blog_2.get_absolute_url }}">{{ blog_2.title }}</a> </h2>
                     {{ blog_2.content | truncatewords:5 | safe }}
