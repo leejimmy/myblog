@@ -7,7 +7,9 @@ from .forms import CommentForm
 # Create your views here.
 def get_blogs(request):
     ctx = {
-        'blogs':Blog.objects.all().order_by('-created')
+        #'blogs':Blog.objects.all().order_by('-created')
+        'blog_1':Blog.objects.all()[0],
+        'blog_2':Blog.objects.all()[1]
     }
 
     return render(request,'index.html',ctx)

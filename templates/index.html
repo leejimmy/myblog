@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>Limmy's Blog | simple way to do it today</title>
+    <title>Jimmy的博客</title>
     <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -14,8 +14,8 @@
 </head>
 <body class="no-js">
     <section class="main">
-        <header>
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <header><!--导航栏-->
+            <nav class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">
 
                     <div class="navbar-header" style="padding: ">
@@ -39,12 +39,14 @@
             </nav>
             <div class="separator"></div>
         </header>
-        <section class="caption">
+
+        <section class="caption"><!--博客的简单描述-->
             <div class="wrap">
                 <h1>Hello! Welcome to Jimmy's Blog.<br>This blog recorded Jimmy and Iris's love story.</h1>
-            </div><!-- wrap -->
-        </section><!-- caption -->
-        <div class="row">
+            </div>
+        </section>
+
+        <div class="row"><!--轮播相册-->
             <div class="col-lg-4 col-sm-3 col-lg-offset-4">
                 <section class="slider">
                     <div class="wrap">
@@ -68,12 +70,12 @@
                 </section><!-- slider -->
             </div>
         </div>
+
         <header>
             <div class="wrap">
                 <div class="separator"></div>
             </div>
         </header>
-        <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
         {% for blog in blogs %}
             <section class="textblock">
                 <div class="wrap">
@@ -83,50 +85,48 @@
         {% endfor %}
         <section class="textblock">
             <div class="wrap">
-                <img src="/static/base/upload/fantte_gezhao.jpg" width="320" height="280" alt="">
+                <img src="/static/base/upload/haibian_gezhao.jpg" width="320" height="280" alt="">
                 <div class="text-column">
-                    <h2 style="text-align: center"><a href="#">株洲，方特</a></h2>
-                    <p>MyJourney HTML template is a landing page with clean structure and beautiful minimalistic design. It can be useful in so many ways,
-        including the most obvious, whis is to Tell a story.</p>
-                    <p>Optimized and valid code using the latest HTML5 and CSS3 technologies allows to make changes in the page structure of the template as it is requared by your needs.</p>
+                    <h2 style="text-align: center"><a href="{{ blog_1.get_absolute_url }}">{{ blog_1.title }}</a></h2>
+                    {{ blog_1.content | truncatewords:5 | safe }}
                 </div><!-- text-column -->
                 <div class="separator"></div>
             </div><!-- wrap -->
         </section><!-- textblock -->
+
         <section class="textblock">
             <div class="wrap">
-                <img src="/static/base/upload/haibian_gezhao.jpg" width="320" height="280" class="align-right" alt="">
+                <img src="/static/base/upload/fantte_gezhao.jpg" width="320" height="280" class="align-right" alt="">
                 <div class="text-column">
-                    <h2 style="text-align: center"><a href="#">深圳，较长尾</a> </h2>
-                    <p>MyJourney is all about being useful when you need nice and simple way to tell the people about what you’ve seen and felt about something important. Something that really means a lot.</p>
-                    <p class="big dark"><a class="button" href="#">More information</a> &nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;<a href="#">get&nbsp;it&nbsp;right&nbsp;now!</a>&nbsp;&nbsp;</p>
+                    <h2 style="text-align: center"><a href="{{ blog_2.get_absolute_url }}">{{ blog_2.title }}</a> </h2>
+                    {{ blog_2.content | truncatewords:5 | safe }}
                 </div><!-- text-column -->
             </div><!-- wrap -->
         </section><!-- textblock -->
+
+
         <section class="twitter">
             <div class="wrap">
+                <div class="ziti"><h2 style="font-family:Georgia;font-family:Arial;">重要的日子</h2></div>
                 <div class="tab clearfix">
                     <div class="box visible">
                         <div class="twitter-post-wrapper">
                             <div class="twitter-post-inside">
-                                <div class="twitter-post">First of many freebies from #PixelBuddha on @dribbble <a href="#">https://dribbble.com/shots/plates</a> Follow us to be in touch!</div>
-                                <p><a href="#">@PixelBuddha</a> long ago</p>
+                                宝宝的生日是2月24日
                             </div><!-- twitter-post-inside -->
                         </div><!-- twitter-post-wrapper -->
                     </div><!-- box -->
                     <div class="box">
                         <div class="twitter-post-wrapper">
                             <div class="twitter-post-inside">
-                                <div class="twitter-post">First of many freebies from #PixelBuddha on @dribbble <a href="#">https://dribbble.com/shots/plates</a> Follow us to be in touch!</div>
-                                <p><a href="#">@PixelBuddha</a> long ago</p>
+                                第一天加宝宝微信是5月24号
                             </div><!-- twitter-post-inside -->
                         </div><!-- twitter-post-wrapper -->
                     </div><!-- box -->
                     <div class="box">
                         <div class="twitter-post-wrapper">
                             <div class="twitter-post-inside">
-                                <div class="twitter-post">First of many freebies from #PixelBuddha on @dribbble <a href="#">https://dribbble.com/shots/plates</a> Follow us to be in touch!</div>
-                                <p><a href="#">@PixelBuddha</a> long ago</p>
+                                在一起的日子是6月2号！！！
                             </div><!-- twitter-post-inside -->
                         </div><!-- twitter-post-wrapper -->
                     </div><!-- box -->
@@ -140,7 +140,7 @@
                 </div><!-- tab -->
             </div><!-- wrap -->
         </section><!-- twitter -->
-        <section class="newsletter">
+        <!--<section class="newsletter">
             <div class="wrap">
                 <div class="newsletter-title">Subscribe to our newsletter</div>
                 <div class="newsletter-wrapper">
@@ -149,12 +149,12 @@
                             <input type="email" placeholder="Your email adress">
                             <input type="button" value="Subscribe now">
                         </form>
-                    </div><!-- newsletter-form -->
-                </div><!-- newsletter-wrapper -->
+                    </div>
+                </div>
                 <p class="newsletter-note">More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>.</p>
-            </div><!-- wrap -->
-        </section><!-- newsletter -->
-    </section><!-- main -->
+            </div>
+        </section>-->
+    </section>
     <footer>
         <div class="wrap">
             <div class="social">
