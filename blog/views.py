@@ -11,11 +11,20 @@ def get_blogs(request):
     #images_url1和images_url2是上传图片的位置
     a1 = Blog.objects.all().order_by('-created')[0]
     con1 = a1.content
-    images_url1 = re.findall('src="(.*?)" alt.*',con1)[0]
+    print "con1: ",con1
+    images1 = re.findall('src="(.*?)" alt.*',con1)
+    if images1:
+        images_url1 = images1[0]
+    else:
+        images_url1 = "/static/photos/img/portfolio/img1.jpg"
 
     a2 = Blog.objects.all().order_by('-created')[1]
     con2 = a2.content
-    images_url2 = re.findall('src="(.*?)" alt.*', con2)[0]
+    images2 = re.findall('src="(.*?)" alt.*', con2)
+    if images2:
+        images_url2 = images2[0]
+    else:
+        images_url2 = "/static/photos/img/portfolio/img2.jpg"
 
     #cont1和cont2是文章过滤掉图片后的文字内容
     cont1 = re.findall('<p>(.*?)</p>',con1)[0]
