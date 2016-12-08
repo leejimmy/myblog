@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ blog.title }}</title>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="row ">
+        <div class="header">
+            <span><a href="/">博客</a> - <a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a> </span>
+        </div>
+        <div class="content">
+            <div class="blog" style="text-align: center">
+                <div class="title">
+                    <a href="#"><h2>{{ blog.title }}</h2></a>
+                </div>
+                <div class="info">
+                    <span class="category" style="color: #ff9900;">{{ blog.category.name }}</span>
+                    <span class="author" style="color: #4a86e8">{{ blog.author }}</span>
+                    <span class="created" style="color: #6aa84f">{{ blog.created|date:"Y-m-d H:i" }}</span>
+                </div>
+                <div class="summary">
+                    {{ blog.content | safe}}
+                </div>
+            </div>
+            <div class="comment">
+                <div class="comment-display" style="padding-top: 20px;">
+                    <h3>评论</h3>
+                    {% for comment in comments %}
+                        <div class="comment-display" style="padding-top: 10px;">
+                            {{ comment.name }} 说: {{ comment.content }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="comment-post" style="padding-top: 20px;">
+                    <form method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="input-field" style="padding-top: 10px;">
+                                {{ field.label }}: {{ field }}
+                            </div>
+                            <div class="error" style="color: red;">
+                                {{ field.errors | safe}}
+                            </div>
+                        {% endfor %}
+                        <button type="submit" style="margin-top: 10px;">提交</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

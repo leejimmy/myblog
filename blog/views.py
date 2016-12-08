@@ -42,11 +42,13 @@ def get_blogs(request):
 
     return render(request,'index.html',ctx)
 
-def get_detail(request,pk):
-    try:
-        blog = Blog.objects.get(pk=pk)
-    except Blog.DoesNotExist:
-        raise Http404
+def get_detail(request):
+    blogs = Blog.objects.all()
+    comments = Comment.objects.all()
+    # try:
+    #     blog = Blog.objects.get(pk=pk)
+    # except Blog.DoesNotExist:
+    #     raise Http404
 
     if request.method == 'GET':
         form = CommentForm()
@@ -57,14 +59,14 @@ def get_detail(request,pk):
         if form.is_valid():
             cleaned_data =  form.cleaned_data
             print "cleaned_data:",cleaned_data
-            cleaned_data['blog'] = blog    #添加一个外键，使评论和对应的blog联系起来
-            print "cleaned_data['blog']:",cleaned_data['blog']
-            print "cleaned_data: ",cleaned_data
+            # cleaned_data['blog'] = blog    #添加一个外键，使评论和对应的blog联系起来
             Comment.objects.create(**cleaned_data)
 
+
     ctx = {
-        'blog':blog,
-        'comments': blog.comment_set.all().order_by('-created'),
+        'blogs':blogs,
+        'comments':comments,
+        # 'comments': blog.comment_set.all().order_by('-created'),
         'form': form
     }
 

@@ -58,6 +58,8 @@ del {
     font-weight: normal;
     font-style: normal;
 }
+
+
 ul,
 ol {
     list-style: none;
@@ -875,3 +877,8 @@ only screen and (min-resolution:2dppx){
     }
 }
 
+.top {
+    background-image: url("images/sunset-1373171.jpg");
+    background-repeat:repeat-x;
+    background-size: cover;
+}

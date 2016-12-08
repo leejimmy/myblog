@@ -1,62 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html crossriderapp2258="true">
 <head>
-    <meta charset="UTF-8">
-    <title>{{ blog.title }}</title>
-    <style>
-        .blog{
-            padding: 20px 0px;
-        }
-        .blog .info span{
-            padding-right: 10px;
-        }
-        .blog .summary{
-            padding-top: 20px;
-        }
-    </style>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>随笔</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" media="screen" href="/static/blog_detail/css/style.css">
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-<body>
-<div class="header">
-    <span><a href="/">博客</a> - <a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a> </span>
-</div>
-<div class="content">
-    <div class="blog">
-        <div class="title">
-            <a href="#"><h2>{{ blog.title }}</h2></a>
-        </div>
-        <div class="info">
-            <span class="category" style="color: #ff9900;">{{ blog.category.name }}</span>
-            <span class="author" style="color: #4a86e8">{{ blog.author }}</span>
-            <span class="created" style="color: #6aa84f">{{ blog.created|date:"Y-m-d H:i" }}</span>
-        </div>
-        <div class="summary">
-            {{ blog.content | safe}}
-        </div>
-    </div>
-    <div class="comment">
-        <div class="comment-display" style="padding-top: 20px;">
-            <h3>评论</h3>
-            {% for comment in comments %}
-                <div class="comment-display" style="padding-top: 10px;">
-                    {{ comment.name }} 说: {{ comment.content }}
-                </div>
+<body class="home blog">
+<div id="wrapper">
+	<div class="container_16">
+
+        <section id="posts" class="prefix_1 grid_9">
+
+            {% for blog in blogs %}
+                <article>
+                    <h2><a href="#" >{{ blog.title }}</a></h2>
+                    <p class="info"><a href="#">{{ blog.created|date:"Y-m-d H:i" }}</a>  |  by <span><a href="#"  rel="author">{{ blog.author }}</a></span>  |  <a href="#"  rel="category">{{ blog.category.name }}</a></p>
+                    <div class="entry">
+                        <p>
+                            {{ blog.content | safe }}
+                        </p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="separator"></p>
+                </article>
             {% endfor %}
-        </div>
-        <div class="comment-post" style="padding-top: 20px;">
-            <form method="post">
-                {% csrf_token %}
-                {% for field in form %}
-                    <div class="input-field" style="padding-top: 10px;">
-                        {{ field.label }}: {{ field }}
-                    </div>
-                    <div class="error" style="color: red;">
-                        {{ field.errors | safe}}
-                    </div>
-                {% endfor %}
-                <button type="submit" style="margin-top: 10px;">提交</button>
-            </form>
-        </div>
-    </div>
+
+		</section>
+
+		<aside class="prefix_1 grid_5">
+            {% include "clock.html" %}
+{#			<form action="#" method="get">#}
+{#				<input id="search" name="s" value="I'm searching for..." type="text">#}
+{#			</form>#}
+					<!-- Categories-->
+			<h4>标签</h4>
+            {% for blog in blogs %}
+                <ul class="categories">
+                    <li><a href="#" >{{ blog.category }}</a></li>
+                </ul>
+            {% endfor %}
+			<div class="clear"></div>
+			<hr>
+			<!-- Comments -->
+			<h4>评论</h4><!--多说评论框-->
+            {% load duoshuo_tags %}
+            {% duoshuo_comments %}
+            <div class="clear"></div>
+			<hr>
+			<!-- Blogroll -->
+		</aside>
+	</div>
 </div>
 </body>
 </html>

@@ -24,7 +24,7 @@ from DjangoUeditor import urls as DjangoUeditor_urls
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',blog_views.get_blogs,name="get_blogs"),
-    url(r'^blog/(?P<pk>\d+)/$',blog_views.get_detail,name='blog_get_detail'),
+    url(r'^blog/$',blog_views.get_detail,name='blog_get_detail'),
     url(r'^photos/$',blog_views.get_photos,name='get_photos'),
     url(r'^ueditor/', include(DjangoUeditor_urls)),
 ]

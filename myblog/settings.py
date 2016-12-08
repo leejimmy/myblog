@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'DjangoUeditor',
+    'duoshuo',
 ]
+
+DUOSHUO_SECRET = 'xxxxx'
+DUOSHUO_SHORT_NAME = 'xxxxx'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
